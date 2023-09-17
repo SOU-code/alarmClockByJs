@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script type="module" src="app.js"></script>
+    <title>Alarm</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="leftPART">
+        <div class="clockPic">
+          <div class="clockCenter"></div>
+          <div class="twoeleoc">12</div>
+          <div class="threeoc">3</div>
+          <div class="sixoc">6</div>
+          <div class="nineoc">9</div>
+          <div class="secondLine"></div>
+          <div class="minuteLine"></div>
+          <div class="hourLine"></div>
+        </div>
+        <div class="digitalClock">00:00:00 AM</div>
+      </div>
+      <div class="rightPART">
+        <div class="addAlarm">
+          <div class="alarmInput">
+            <div class="hourAlarm">
+              <button class="minius">-</button>
+              <div class="hourInput"></div>
+              <button class="plus">+</button>
+            </div>
+            <div class="minuteAlarm">
+              <button class="minius">-</button>
+              <div class="minuteInput"></div>
+              <button class="plus">+</button>
+            </div>
+            <select class="apAlarm">
+              <option value="AM">AM</option>
+              <option value="PM">PM</option>
+            </select>
+          </div>
+          <div class="submit">Add Alarm</div>
+        </div>
+        <div class="stopAlarm">Stop</div>
+        <div class="alarmList"></div>
+      </div>
+    </div>
+    <div class="notifications">
+    </div>
+  </body>
+</html>

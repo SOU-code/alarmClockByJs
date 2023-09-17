@@ -1,0 +1,236 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+:root {
+  font-size: 62.5%;
+  --grayColor: rgb(57, 57, 57);
+  --whiteColor: rgb(255, 255, 255);
+}
+body {
+  position: relative;
+  height: 100vh;
+  color: var(--whiteColor);
+  background-color: var(--grayColor);
+}
+audio{
+  display: hide;
+}
+.container {
+  display: flex;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: black;
+}
+.leftPART{
+  border: 5px solid var(--whiteColor);
+  padding: 3rem;
+}
+.clockPic {
+  position: relative;
+  width: 20rem;
+  height: 20rem;
+  border: 4px solid var(--whiteColor);
+  border-radius: 50%;
+  font-size: 2rem;
+  font-weight: 700;
+  padding: 5px;
+}
+.clockCenter {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 1rem;
+  height: 1rem;
+  background-color: var(--grayColor);
+  border-radius: 50%;
+  z-index: 4;
+}
+.twoeleoc {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.sixoc {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.threeoc {
+  position: absolute;
+  top: 50%;
+  right: 5px;
+  transform: translateY(-50%);
+}
+.nineoc {
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  transform: translateY(-50%);
+}
+.secondLine {
+  position: absolute;
+  top: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2px;
+  height: 7.7rem;
+  background-color: rgb(0, 247, 255);
+  transform-origin: bottom;
+  z-index: 3;
+}
+.minuteLine {
+  position: absolute;
+  top: 4rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 3px;
+  height: 5.8rem;
+  background-color: rgb(251, 0, 255);
+  transform-origin: bottom;
+  z-index: 2;
+}
+.hourLine {
+  position: absolute;
+  top: 6rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 5px;
+  height: 3.8rem;
+  background-color: rgb(242, 255, 0);
+  transform-origin: bottom;
+}
+.digitalClock{
+  margin-top: 5rem;
+  padding: 1rem;
+  width: 20rem;
+  font-size: 2.8rem;
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
+  color: rgb(157, 255, 0);
+  letter-spacing: 0.1rem;
+  border: 3px dashed var(--whiteColor);
+}
+.rightPART{
+  border: 5px solid var(--whiteColor);
+  padding: 3rem 1rem;
+}
+.alarmInput{
+  display: flex;
+  justify-content: space-between;
+  width: 25rem;
+}
+.hourAlarm,.minuteAlarm{
+  display: flex;
+}
+button,.minuteInput,.hourInput,select{
+  height: 3rem;
+  width: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  border: 2px solid var(--whiteColor);
+  color: var(--whiteColor);
+}
+.plus{
+  background-color: rgb(102, 255, 0);
+}
+.minius{
+  background-color: rgb(255, 35, 35);
+}
+select{
+  width: 4rem;
+  appearance: none;
+  background-color: var(--grayColor);
+}
+.submit{
+  width: 14rem;
+  height: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 3rem auto;
+  background-color: rgb(0, 128, 11);
+  cursor: pointer;
+  border-radius: 1rem;
+  box-shadow: 0.2rem 0.2rem 1rem 0.2rem #ffffff51;
+}
+.stopAlarm{
+  width: 10rem;
+  padding: 0.5rem 0;
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: 500;
+  margin: 2rem auto;
+  background-color: rgb(7, 10, 40);
+  cursor: pointer;
+  border-radius: 1rem;
+  box-shadow: 0.2rem 0.2rem 1rem 0.2rem #ffffff51;
+  display: none;
+}
+img{
+  width: 3rem;
+  margin-right: 1rem;
+}
+li{
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 1rem;
+  margin: 1rem;
+  background-color: rgb(14, 0, 62);
+  border-radius: 1rem;
+}
+.alarmTime{
+  display: flex;
+  align-items: center;
+}
+.alarmClear{
+  background-color: rgb(165, 0, 0);
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border-radius: 1rem;
+}
+.notifications{
+  position: absolute;
+  bottom: 2rem;
+  right: 2rem;
+  opacity: 0.7;
+}
+.notifications div{
+  padding: 1rem 2rem;
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+.notifications .danger{
+  background-color: rgb(133, 0, 0);
+  margin: 2rem 0;
+}
+.notifications .success{
+  background-color: rgb(23, 141, 0);
+  margin: 2rem 0;
+}
+.notifications .warning{
+  background-color: rgb(167, 108, 0);
+  margin: 2rem 0;
+}
+@media(max-width:600px){
+  .container{
+    flex-direction: column;
+    top: 5rem;
+    left:50%;
+    transform: translate(-50%,0%);
+    margin-bottom: 5rem;
+  }
+}
