@@ -5,11 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
     <script type="module" src="app.js"></script>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
     <title>Alarm</title>
   </head>
   <body>
+    <!-- Full Container -->
     <div class="container">
+      <!-- Left Part Digital Clock and Analog Clock -->
       <div class="leftPART">
+        <!-- Analog Clock -->
         <div class="clockPic">
           <div class="clockCenter"></div>
           <div class="twoeleoc">12</div>
@@ -20,33 +24,43 @@
           <div class="minuteLine"></div>
           <div class="hourLine"></div>
         </div>
+        <!-- Digital Clock -->
         <div class="digitalClock">00:00:00 AM</div>
       </div>
+      <!-- Right Part -->
       <div class="rightPART">
+        <!-- New Alram Add section -->
         <div class="addAlarm">
+          <!-- Alarm Input -->
           <div class="alarmInput">
+            <!-- Hour Input -->
             <div class="hourAlarm">
               <button class="minius">-</button>
               <div class="hourInput"></div>
               <button class="plus">+</button>
             </div>
+            <!-- Minute Input -->
             <div class="minuteAlarm">
               <button class="minius">-</button>
               <div class="minuteInput"></div>
               <button class="plus">+</button>
             </div>
+            <!-- AM/PM Select -->
             <select class="apAlarm">
               <option value="AM">AM</option>
               <option value="PM">PM</option>
             </select>
           </div>
+          <!-- add Alarm Button -->
           <div class="submit">Add Alarm</div>
         </div>
+        <!-- Stop Alarm button -->
         <div class="stopAlarm">Stop</div>
+        <!-- All Alarm List -->
         <div class="alarmList"></div>
       </div>
     </div>
-    <div class="notifications">
-    </div>
+    <!-- Alarm add/delete/maximaum notification -->
+    <div class="notifications"></div>
   </body>
 </html>

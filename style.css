@@ -1,8 +1,10 @@
+/* Reset style */
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
+/* Set root font size 10px for using rem */
 :root {
   font-size: 62.5%;
   --grayColor: rgb(57, 57, 57);
@@ -14,9 +16,11 @@ body {
   color: var(--whiteColor);
   background-color: var(--grayColor);
 }
-audio{
+/* Firstly audio display none */
+audio {
   display: hide;
 }
+/* Full Container Stling */
 .container {
   display: flex;
   position: absolute;
@@ -25,10 +29,12 @@ audio{
   transform: translate(-50%, -50%);
   background-color: black;
 }
-.leftPART{
+/* Left Part styling */
+.leftPART {
   border: 5px solid var(--whiteColor);
   padding: 3rem;
 }
+/* analog clock picture styling */
 .clockPic {
   position: relative;
   width: 20rem;
@@ -46,7 +52,7 @@ audio{
   transform: translate(-50%, -50%);
   width: 1rem;
   height: 1rem;
-  background-color: var(--grayColor);
+  background-color: var(--whiteColor);
   border-radius: 50%;
   z-index: 4;
 }
@@ -106,7 +112,8 @@ audio{
   background-color: rgb(242, 255, 0);
   transform-origin: bottom;
 }
-.digitalClock{
+/* Digital Clock Styling */
+.digitalClock {
   margin-top: 5rem;
   padding: 1rem;
   width: 20rem;
@@ -114,23 +121,29 @@ audio{
   font-weight: 700;
   display: flex;
   justify-content: center;
-  color: rgb(157, 255, 0);
+  color: rgb(242, 255, 0);
   letter-spacing: 0.1rem;
   border: 3px dashed var(--whiteColor);
 }
-.rightPART{
+/* Right part Styling */
+.rightPART {
   border: 5px solid var(--whiteColor);
   padding: 3rem 1rem;
 }
-.alarmInput{
+/* Alarm input styling */
+.alarmInput {
   display: flex;
   justify-content: space-between;
   width: 25rem;
 }
-.hourAlarm,.minuteAlarm{
+.hourAlarm,
+.minuteAlarm {
   display: flex;
 }
-button,.minuteInput,.hourInput,select{
+button,
+.minuteInput,
+.hourInput,
+select {
   height: 3rem;
   width: 3rem;
   display: flex;
@@ -140,18 +153,19 @@ button,.minuteInput,.hourInput,select{
   border: 2px solid var(--whiteColor);
   color: var(--whiteColor);
 }
-.plus{
-  background-color: rgb(102, 255, 0);
+.plus {
+  background-color: rgb(0, 247, 255);
 }
-.minius{
-  background-color: rgb(255, 35, 35);
+.minius {
+  background-color: rgb(251, 0, 255);
 }
-select{
+select {
   width: 4rem;
   appearance: none;
   background-color: var(--grayColor);
 }
-.submit{
+/* add alarm button */
+.submit {
   width: 14rem;
   height: 4rem;
   display: flex;
@@ -160,12 +174,13 @@ select{
   font-size: 2rem;
   font-weight: 700;
   margin: 3rem auto;
-  background-color: rgb(0, 128, 11);
+  background-color: rgb(60, 255, 0);
   cursor: pointer;
   border-radius: 1rem;
   box-shadow: 0.2rem 0.2rem 1rem 0.2rem #ffffff51;
 }
-.stopAlarm{
+/* Stop alarm button */
+.stopAlarm {
   width: 10rem;
   padding: 0.5rem 0;
   text-align: center;
@@ -178,59 +193,65 @@ select{
   box-shadow: 0.2rem 0.2rem 1rem 0.2rem #ffffff51;
   display: none;
 }
-img{
+img {
   width: 3rem;
   margin-right: 1rem;
 }
-li{
+li {
   font-size: 2rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 0.5rem 1rem;
   margin: 1rem;
-  background-color: rgb(14, 0, 62);
+  background-color: rgb(0, 247, 255);
   border-radius: 1rem;
 }
-.alarmTime{
+.alarmTime {
   display: flex;
   align-items: center;
 }
-.alarmClear{
-  background-color: rgb(165, 0, 0);
+/* Delete alarm styling */
+.alarmClear {
+  background-color: rgb(251, 0, 255);
   padding: 0.5rem 1rem;
   cursor: pointer;
   border-radius: 1rem;
 }
-.notifications{
+/* Notification styling */
+.notifications {
   position: absolute;
   bottom: 2rem;
   right: 2rem;
   opacity: 0.7;
 }
-.notifications div{
+.notifications div {
   padding: 1rem 2rem;
   font-size: 1.8rem;
   font-weight: 700;
 }
-.notifications .danger{
+/* for delete alarm notification */
+.notifications .danger {
   background-color: rgb(133, 0, 0);
   margin: 2rem 0;
 }
-.notifications .success{
+/* for add new alarm notification */
+.notifications .success {
   background-color: rgb(23, 141, 0);
   margin: 2rem 0;
 }
-.notifications .warning{
+/* for maximum notification */
+.notifications .warning {
   background-color: rgb(167, 108, 0);
   margin: 2rem 0;
 }
-@media(max-width:600px){
-  .container{
+/* Mobile View */
+@media (max-width: 600px) {
+  .container {
     flex-direction: column;
     top: 5rem;
-    left:50%;
-    transform: translate(-50%,0%);
+    left: 50%;
+    transform: translate(-50%, 0%);
     margin-bottom: 5rem;
   }
 }
